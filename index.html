@@ -5,22 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Koketso Leopeng | Portfolio</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
-    <style>
-        body { background: #f8f9fa; }
-        header { padding: 100px 0; background: #222; color: #fff; }
-        .section-title { font-weight: 700; margin-bottom: 40px; }
-        .project-card { transition: 0.3s; }
-        .project-card:hover { transform: translateY(-5px); }
-        footer { background: #222; color: #fff; padding: 20px 0; }
-    </style>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Koketso Leopeng</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
     <!-- Header / Hero Section -->
     <header class="text-center">
         <div class="container">
             <h1 class="display-4 fw-bold">Koketso Leopeng</h1>
             <p class="lead">Junior Software & Web Developer</p>
-            <a href="#contact" class="btn btn-primary mt-3">Hire Me</a>
+            <div class="mt-4">
+                <a href="#contact" class="btn btn-primary btn-lg me-2">Hire Me</a>
+                <a href="https://github.com/Kokets012" target="_blank" class="btn btn-outline-light btn-lg">
+                    <i class="bi bi-github"></i> GitHub
+                </a>
+            </div>
         </div>
     </header>
 
@@ -28,7 +45,7 @@
     <section id="about" class="py-5">
         <div class="container">
             <h2 class="section-title text-center">About Me</h2>
-            <p class="text-center mx-auto" style="max-width: 700px;">
+            <p class="text-center mx-auto">
                 I'm Koketso Leopeng, a passionate junior software developer specializing in web development.
                 I enjoy building responsive, user-friendly websites using HTML, CSS, JavaScript, Bootstrap and PHP.
                 I host my dynamic projects on InfinityFree and static projects on GitHub Pages. I'm always learning
@@ -42,10 +59,42 @@
         <div class="container">
             <h2 class="section-title text-center">Skills</h2>
             <div class="row text-center">
-                <div class="col-md-3 col-6 mb-4"><strong>HTML5</strong></div>
-                <div class="col-md-3 col-6 mb-4"><strong>CSS3 / Bootstrap</strong></div>
-                <div class="col-md-3 col-6 mb-4"><strong>JavaScript</strong></div>
-                <div class="col-md-3 col-6 mb-4"><strong>PHP</strong></div>
+                <div class="col-md-2 col-6 mb-4">
+                    <div class="skill-item">
+                        <i class="bi bi-filetype-html"></i>
+                        <strong>HTML5</strong>
+                    </div>
+                </div>
+                <div class="col-md-2 col-6 mb-4">
+                    <div class="skill-item">
+                        <i class="bi bi-filetype-css"></i>
+                        <strong>CSS3</strong>
+                    </div>
+                </div>
+                <div class="col-md-2 col-6 mb-4">
+                    <div class="skill-item">
+                        <i class="bi bi-bootstrap"></i>
+                        <strong>Bootstrap</strong>
+                    </div>
+                </div>
+                <div class="col-md-2 col-6 mb-4">
+                    <div class="skill-item">
+                        <i class="bi bi-filetype-js"></i>
+                        <strong>JavaScript</strong>
+                    </div>
+                </div>
+                <div class="col-md-2 col-6 mb-4">
+                    <div class="skill-item">
+                        <i class="bi bi-filetype-php"></i>
+                        <strong>PHP</strong>
+                    </div>
+                </div>
+                <div class="col-md-2 col-6 mb-4">
+                    <div class="skill-item">
+                        <i class="bi bi-database"></i>
+                        <strong>MySQL</strong>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -56,24 +105,96 @@
             <h2 class="section-title text-center">Projects</h2>
             <div class="row">
                 <div class="col-md-4 mb-4">
-                    <div class="card project-card p-3 shadow-sm">
-                        <h5>Static Website</h5>
-                        <p>A clean HTML/CSS site hosted on GitHub Pages.</p>
-                        <a href="#" class="btn btn-outline-dark btn-sm">View Project</a>
+                    <div class="card project-card shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Learning Bootstrap Website</h5>
+                            <p class="card-text">A clean HTML/CSS responsive website teaching boostrap hosted on GitHub Pages.</p>
+                            <div class="tech-stack">
+                                <span class="badge bg-secondary">HTML5</span>
+                                <span class="badge bg-secondary">CSS</span>
+                                <span class="badge bg-secondary">Bootsrap</span>
+                                <span class="badge bg-secondary">GitHub Pages</span>
+                            </div>
+                            <div class="mt-3">
+                                <a href="https://kokets012.github.io/Boostrap-web/Final.html" target="_blank" class="btn btn-primary btn-sm">Live Demo</a>
+                                <a href="https://github.com/Kokets012/Boostrap-web" target="_blank" class="btn btn-outline-dark btn-sm ms-2">Source Code</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <div class="card project-card p-3 shadow-sm">
-                        <h5>Dynamic PHP System</h5>
-                        <p>PHP/MySQL CRUD app hosted on InfinityFree.</p>
-                        <a href="#" class="btn btn-outline-dark btn-sm">View Project</a>
+                    <div class="card project-card shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Learning JavaScript Website</h5>
+                            <p class="card-text">A clean HTML/CSS and JavaScript responsive website teaching JavaScript hosted on GitHub Pages.</p>
+                            <div class="tech-stack">
+                                <span class="badge bg-secondary">HTML5</span>
+                                <span class="badge bg-secondary">CSS</span>
+                                <span class="badge bg-secondary">JavaScript</span>
+                                <span class="badge bg-secondary">GitHub Pages</span>
+                            </div>
+                            <div class="mt-3">
+                                <a href="https://kokets012.github.io/Boostrap-web/javascript.html" target="_blank" class="btn btn-primary btn-sm">Live Demo</a>
+                                <a href="https://github.com/Kokets012/Boostrap-web" target="_blank" class="btn btn-outline-dark btn-sm ms-2">Source Code</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <div class="card project-card p-3 shadow-sm">
-                        <h5>JavaScript App</h5>
-                        <p>Small JS-based project showcasing logic and UI.</p>
-                        <a href="#" class="btn btn-outline-dark btn-sm">View Project</a>
+                    <div class="card project-card shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">PC Builder Compatibility Checker Site</h5>
+                            <p class="card-text">A web application that helps users build compatible PC configurations with real-time compatibility checking and price calculation in South African Rands.</p>
+                            <div class="tech-stack">
+                                <span class="badge bg-secondary">HTML5</span>
+                                <span class="badge bg-secondary">Bootstrap 5</span>                                
+                                <span class="badge bg-secondary">MySQL</span>
+                                <span class="badge bg-secondary">JavaScript</span>
+                                <span class="badge bg-secondary">PHP (Procedural)</span>                                
+                                <span class="badge bg-secondary">InfinityFree Host</span>
+                            </div>
+                            <div class="mt-3">
+                                <a href="https://evepc-builder.42web.io" target="_blank" class="btn btn-primary btn-sm">Live Demo</a>
+                                <a href="https://github.com/Kokets012/Pc-Builder" target="_blank" class="btn btn-outline-dark btn-sm ms-2">Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card project-card shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Promen Services Booking Site</h5>
+                            <p class="card-text">Promen Service is a South African renovation company platform for customer quotes and bookings, with an admin dashboard. Built with PHP/MySQL and hosted on InfinityFree.</p>
+                            <div class="tech-stack">
+                                <span class="badge bg-secondary">HTML5</span>
+                                <span class="badge bg-secondary">Bootstrap</span>                                
+                                <span class="badge bg-secondary">JavaScript</span>
+                                <span class="badge bg-secondary">PHP</span>
+                                <span class="badge bg-secondary">Firebase Realtime Database</span>
+                                <span class="badge bg-secondary">InfinityFree Host</span>
+                            </div>
+                            <div class="mt-3">
+                                <a href="http://promen-service.wuaze.com" target="_blank" class="btn btn-primary btn-sm">Live Demo</a>
+                                <a href="https://github.com/Kokets012/Proman-Service-Nee" target="_blank" class="btn btn-outline-dark btn-sm ms-2">Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card project-card shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Weather App</h5>
+                            <p class="card-text">JavaScript weather application using API calls with responsive UI.</p>
+                            <div class="tech-stack">
+                                <span class="badge bg-secondary">JavaScript</span>
+                                <span class="badge bg-secondary">API</span>
+                                <span class="badge bg-secondary">CSS3</span>
+                            </div>
+                            <div class="mt-3">
+                                <a href="https://yourusername.github.io/weather-app" target="_blank" class="btn btn-primary btn-sm">Live Demo</a>
+                                <a href="https://github.com/yourusername/weather-app" target="_blank" class="btn btn-outline-dark btn-sm ms-2">Source Code</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -84,12 +205,20 @@
     <section id="experience" class="py-5 bg-light">
         <div class="container">
             <h2 class="section-title text-center">Experience</h2>
-            <p class="text-center mx-auto" style="max-width: 700px;">
-                As an aspiring developer, I’ve worked on personal projects and freelance-style tasks.
-                My experience includes building responsive websites, creating backend logic in PHP,
-                and managing small databases using MySQL.
-                I'm also continuously improving through real-world projects and hands-on learning.
-            </p>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="experience-item mb-4">
+                        <h5>Freelance Web Developer</h5>
+                        <p class="text-muted">2025 - Present</p>
+                        <p>Building responsive websites for small businesses, implementing backend logic in PHP, and managing MySQL databases for client projects.</p>
+                    </div>
+                    <div class="experience-item">
+                        <h5>Personal Projects & Learning</h5>
+                        <p class="text-muted">2022 - Present</p>
+                        <p>Continuously developing and deploying projects to GitHub Pages and InfinityFree to enhance skills in full-stack development.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -98,29 +227,46 @@
         <div class="container">
             <h2 class="section-title text-center">Contact Me</h2>
             <div class="row justify-content-center">
-                <div class="col-md-6">
-                    <form>
+                <div class="col-md-8 col-lg-6">
+                    <form id="contactForm">
                         <div class="mb-3">
                             <label class="form-label">Name</label>
-                            <input type="text" class="form-control" required />
+                            <input type="text" class="form-control" id="name" required />
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Email</label>
-                            <input type="email" class="form-control" required />
+                            <input type="email" class="form-control" id="email" required />
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Message</label>
-                            <textarea class="form-control" rows="4" required></textarea>
+                            <textarea class="form-control" id="message" rows="4" required></textarea>
                         </div>
-                        <button class="btn btn-primary w-100">Send Message</button>
+                        <button type="submit" class="btn btn-primary w-100">Send Message</button>
                     </form>
+                    <div class="text-center mt-4">
+                        <p>Or reach me directly at: <a href="mailto:leopengkoketso0@gmail.com">leopengkoketso0@gmail.com</a></p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <footer class="text-center">
-        <p>© 2025 Koketso Leopeng. All Rights Reserved.</p>
+        <div class="container">
+            <div class="social-links mb-3">
+                <a href="https://github.com/Kokets012" target="_blank" class="social-icon"><i class="bi bi-github"></i></a>
+                <a href="https://linkedin.com/in/yourusername" target="_blank" class="social-icon"><i class="bi bi-linkedin"></i></a>
+                <a href="mailto:leopengkoketso0@gmail.com" class="social-icon"><i class="bi bi-envelope"></i></a>
+            </div>
+            <p>© 2025 Koketso Leopeng. All Rights Reserved.</p>
+        </div>
     </footer>
+
+    <!-- Bootstrap JS & Icons -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- Custom JS -->
+    <script src="script.js"></script>
 </body>
 </html>
