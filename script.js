@@ -65,3 +65,55 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+//-----------------------------------------
+
+// Dark Mode Toggle Functionality
+const darkModeToggle = document.getElementById('darkModeToggle');
+const toggleIcon = document.getElementById('toggleIcon');
+const htmlElement = document.documentElement;
+
+// Check for saved theme preference or prefer-color-scheme
+const savedTheme = localStorage.getItem('theme');
+const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+
+// Set initial theme
+if (savedTheme === 'dark' || (!savedTheme && prefersDarkScheme.matches)) {
+    enableDarkMode();
+} else {
+    disableDarkMode();
+}
+
+// Toggle function
+if (darkModeToggle) {
+    darkModeToggle.addEventListener('click', function() {
+        if (document.body.classList.contains('dark-mode')) {
+            disableDarkMode();
+        } else {
+            enableDarkMode();
+        }
+    });
+}
+
+function enableDarkMode() {
+    document.body.classList.add('dark-mode');
+    toggleIcon.className = 'bi bi-sun';
+    localStorage.setItem('theme', 'dark');
+}
+
+function disableDarkMode() {
+    document.body.classList.remove('dark-mode');
+    toggleIcon.className = 'bi bi-moon';
+    localStorage.setItem('theme', 'light');
+}
+
+// Listen for system theme changes
+prefersDarkScheme.addEventListener('change', (e) => {
+    if (!localStorage.getItem('theme')) { // Only if user hasn't set a preference
+        if (e.matches) {
+            enableDarkMode();
+        } else {
+            disableDarkMode();
+        }
+    }
+});
